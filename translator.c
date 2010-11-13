@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
     gtk_widget_set_size_request (GTK_WIDGET (window), WIDTH, HEIGHT);
     gtk_window_set_title(GTK_WINDOW (window), "Translator");
     gtk_window_move(GTK_WINDOW (window), POSX, POSY);
-    gtk_window_set_icon_from_file(GTK_WINDOW (window), "icon.jpg", NULL);
+    gtk_window_set_icon_from_file(GTK_WINDOW (window), ICON_PATH, NULL);
 
     /* Scrollbar properties */
     gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolledWindow),

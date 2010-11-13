@@ -6,6 +6,7 @@
 #define POSX 1050
 #define POSY 300
 #define HEIGHT_LINE 17
+#define ICON_PATH "/usr/share/translator/icon.jpg"
 
 #define BUFFOR_SIZE 2048
 

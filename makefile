@@ -14,3 +14,11 @@ tar:
 	for file in `ls | grep -xv "translator"`; do cp $$file ./translator; done
 	tar -cvf translator.tar.gz ./translator
 	rm -rf translator
+
+install: compile
+	chmod +x install.sh
+	./install.sh
+
+uninstall:
+	rm -rf /usr/share/translator
+	rm /usr/bin/translator

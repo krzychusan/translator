@@ -2,5 +2,17 @@
 Prosty translator słów z języka angielskiego na polski napisany w C i Gtk dla Gnome.
 Wykorzystuje API dostarczone przez Google jak i stronę translate.google.com
 
+Wpisujemy tekst w pole, naciskamy Enter i po chwili otrzymujemy znaczenie
+naszego słowa. W dowolnej chwili możemy wcisnąć Tab i wtedy dostaniemy
+dokładniejsze tłumaczenie. Zakończenie aplikacji możliwe jest przez wciśnięcie
+Esc.
+
+Konfiguracja:
+Możliwa przed instalacją w config.h
+
+Instalacja:
+sudo make install
+
+
 Autor Krzysztof Bochenek
 Email krzychusan@gmail.com
