@@ -1,0 +1,6 @@
+
+Prosty translator słów z języka angielskiego na polski napisany w C i Gtk dla Gnome.
+Wykorzystuje API dostarczone przez Google jak i stronę translate.google.com
+
+Autor Krzysztof Bochenek
+Email krzychusan@gmail.com
