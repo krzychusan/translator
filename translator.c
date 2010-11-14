@@ -3,10 +3,12 @@
  * email: krzychusan@gmail.com
  */
 
+#include <stdlib.h>
 #include <gtk/gtk.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkkeysyms.h>
 #include <time.h>
+#include <string.h>
 
 #include "config.h"
 
@@ -48,7 +50,7 @@ int main(int argc, char *argv[])
 
     /* Window properties */
     gtk_widget_set_size_request (GTK_WIDGET (window), WIDTH, HEIGHT);
-    gtk_window_set_title(GTK_WINDOW (window), "Translator");
+    gtk_window_set_title(GTK_WINDOW (window), "Słownik");
     gtk_window_move(GTK_WINDOW (window), POSX, POSY);
     gtk_window_set_icon_from_file(GTK_WINDOW (window), ICON_PATH, NULL);
 
@@ -155,7 +157,7 @@ getText(GtkWidget *widget, GtkWidget *entry)
     }
     else
     {
-        entry_text = getBasicText(buffor);
+        entry_text = (gchar*)getBasicText(buffor);
         if (entry_text == NULL) {
             setStatusbar("Translation failed!");
             return;
@@ -176,7 +178,7 @@ getMoreText(GtkWidget *widget, GtkWidget *entry)
     gettimeofday(&t1, NULL);
     setStatusbar("Start");
     gchar *entry_text;
-    entry_text = gtk_entry_get_text (GTK_ENTRY (entry));
+    entry_text = (gchar*)gtk_entry_get_text (GTK_ENTRY (entry));
     memset(buffor, '\0', BUFFOR_SIZE);
 
     int ans;
@@ -187,7 +189,7 @@ getMoreText(GtkWidget *widget, GtkWidget *entry)
     }
     else
     {
-        entry_text = getAdditionalText(buffor);
+        entry_text = (gchar*)getAdditionalText(buffor);
         if (entry_text == NULL) {
             setStatusbar("Translation failed!");
             return;

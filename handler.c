@@ -1,10 +1,8 @@
 
 #include <stdio.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <netinet/tcp.h>
-#include <netdb.h>
+#include <string.h>
+#include <stdlib.h>
+
 #include "config.h"
 
 /* Idea is to ask google translator API about translated word

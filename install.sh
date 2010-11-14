@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 mkdir /usr/share/translator
 cp translator /usr/share/translator
-cp icon.jpg /usr/share/translator
+cp icon.png /usr/share/translator
 cp makefile /usr/share/translator
 ln -s /usr/share/translator/translator /usr/bin/translator
 
